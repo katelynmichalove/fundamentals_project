@@ -4,16 +4,18 @@
 
 body{
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 8px;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
 }
+
+/* Heading Styles */
 h1 {
-  font-size: 2.6em;
-  letter-spacing: 0.05em;
+  font-size: 2.2em;
+  letter-spacing: 0.02em;
 }
 h2 {
   font-size: 2em;
@@ -25,10 +27,13 @@ h3 {
   font-size: 1.5em;
   color: #676867;
 }
+
+
 /* Navigation Section */
 .top {
   background-color: #22367D;
   position: fixed;
+  z-index: 2;
 }
 
 .nav {
@@ -51,7 +56,7 @@ h3 {
 
 .back {
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 2.1%;
   float: left;
   width: 4%;
@@ -59,9 +64,9 @@ h3 {
 
 .back-text {
   position: absolute;
-  left: 7.2%;
+  left: 4.7%;
   color: white;
-  font-size: 2.6em;
+  font-size: 2.2em;
   width: 16%;
   float: left;
   padding-left: 2%;
@@ -85,6 +90,8 @@ h3 {
   padding: 1%;
 }
 
+
+/* Bus Data Section */
 .eastbound, .northbound, .southbound, .reroute, .out-of-service {
   display: inline-block;
   width: 100%;
@@ -133,12 +140,14 @@ h3 {
   margin-top: 2%;
 }
 
+/* Map section */
 .map {
   position: fixed;
   z-index: 1;
   margin: none;
-  top: 19.7%;
+  top: 15%;
   width: 100%;
+  height: 32%;
 }
 
 .map-section {
@@ -151,3 +160,39 @@ h3 {
   top: 0%;
   width: 100%;
 }
+
+/* Responsive Design */
+
+@media screen and (min-width: 575px){
+   h1, .back-text {
+     font-size: 4em;
+   }
+   .bus-data {
+     top: 60%;
+   }
+   .eastbound-title, .northbound-title, .southbound-title, .reroute-title, .out-of-service-title {
+     font-size: 2em;
+   }
+   h3 {
+     font-size: 2em;
+   }
+   .map {
+     top: 26%;
+     height: 40%;
+   }
+   .bus-data {
+     top: 70%;
+   }
+  }
+
+  @media screen and (min-width: 991px) {
+    h1, .back-text {
+      font-size: 6em;
+    }
+    .eastbound-title, .northbound-title, .southbound-title, .reroute-title, .out-of-service-title {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 3em;
+    }
+  }
