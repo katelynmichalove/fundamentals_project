@@ -14,7 +14,7 @@ body{
 
 /* Heading Styles */
 h1 {
-  font-size: 2.2em;
+  font-size: 2.1em;
   letter-spacing: 0.02em;
 }
 h2 {
@@ -32,44 +32,41 @@ h3 {
 /* Navigation Section */
 .top {
   background-color: #22367D;
-  position: fixed;
   z-index: 2;
 }
 
-.nav {
-  position: relative;
+nav {
   margin: 0 auto;
   display: inline-block;
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 8%;
+  padding-top: 0%;
+  padding-bottom: 2.5%;
   border-color: none;
 }
 
 .main-stop {
-  position: absolute;
-  left: 10%;
   color: white;
   width: 80%;
   text-align: center;
+  float: center;
+  padding-top: 2.5%;
 }
 
 .back {
-  position: absolute;
-  top: 50%;
-  left: 2.1%;
   float: left;
-  width: 4%;
+  width: 5%;
+  padding-top: 2.5%;
+  padding-left: 2.1%;
 }
 
 .back-text {
-  position: absolute;
-  left: 4.7%;
   color: white;
-  font-size: 2.2em;
-  width: 16%;
+  font-size: 2.1em;
+  width: 14%;
   float: left;
   padding-left: 2%;
+  padding-top: 2.5%;
+  padding-right: 5%;
   letter-spacing: 0.05em;
 }
 
@@ -92,6 +89,42 @@ h3 {
 
 
 /* Bus Data Section */
+
+
+.categories {
+  width: 100%;
+  background-color: #416AFF;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 1em;
+  margin: 0;
+}
+
+.destination-title {
+  display: inline-block;
+  width: 37%;
+  text-align: left;
+  padding-left: 4.27%;
+  color: white;
+}
+
+.frequency-title {
+  display: inline-block;
+  width: 31%;
+  text-align: center;
+  float: center;
+  color: white;
+}
+
+.arrival-title {
+  display: inline-block;
+  width: 24%;
+  text-align: right;
+  padding-right: 4.27%;
+  color: white;
+}
+
+
 .eastbound, .northbound, .southbound, .reroute, .out-of-service {
   display: inline-block;
   width: 100%;
@@ -105,6 +138,11 @@ h3 {
   padding-bottom: 2%;
 }
 
+.northbound-title, .southbound-title, .reroute-title, .out-of-service-title {
+  margin-top: 2%;
+}
+
+
 .eastbound-list, .northbound-list, .southbound-list, .reroute-list, .out-of-service-list {
   width: 100%;
   display: inline-block;
@@ -112,23 +150,34 @@ h3 {
 
 .destination {
   display: inline-block;
-  width: 47%;
+  width: 42%;
+  margin-bottom: 2%;
+}
+.arrival {
+  display: inline-block;
+  width: 24%;
+  margin-bottom: 2%;
+  text-align: right;
+}
+.time {
+  width: 26%;
+  display: inline-block;
+  float: center;
+  text-align: center;
   margin-bottom: 2%;
 }
 
-.time {
-  width: 47%;
+.resume-time {
   display: inline-block;
-  float: right;
-  text-align: right;
-  margin-bottom: 2%;
+  width: 40%;
+  float: center;
+  padding: 2%;
 }
 
 .bus-data {
-  position: absolute;
   z-index: 0;
   overflow: hidden;
-  top: 50%;
+  top: 55%;
   width: 100%;
   margin-top: 0%;
 }
@@ -142,21 +191,17 @@ h3 {
 
 /* Map section */
 .map {
-  position: fixed;
   z-index: 1;
   margin: none;
-  top: 15%;
   width: 100%;
   height: 32%;
 }
 
 .map-section {
   display: inline-block;
-  position: absolute;
   top: 19.7%;
 }
 .status {
-  position: absolute;
   top: 0%;
   width: 100%;
 }
@@ -165,34 +210,48 @@ h3 {
 
 @media screen and (min-width: 575px){
    h1, .back-text {
-     font-size: 4em;
+     font-size: 5em;
    }
    .bus-data {
-     top: 60%;
+     top: 75%;
    }
    .eastbound-title, .northbound-title, .southbound-title, .reroute-title, .out-of-service-title {
      font-size: 2em;
    }
    h3 {
-     font-size: 2em;
+     font-size: 3em;
    }
    .map {
      top: 26%;
      height: 40%;
    }
-   .bus-data {
-     top: 70%;
+   .categories {
+     top: 65%;
+     font-size: 2em;
    }
   }
 
   @media screen and (min-width: 991px) {
     h1, .back-text {
-      font-size: 6em;
+      font-size: 6.5em;
     }
     .eastbound-title, .northbound-title, .southbound-title, .reroute-title, .out-of-service-title {
       font-size: 3em;
     }
     h3 {
+      font-size: 4em;
+    }
+    .map {
+      width:100%;
+      top: 26%;
+    }
+    .top {
+      width: 100%;
+      max-height: 70%;
+    }
+    .categories {
       font-size: 3em;
+    }
+
     }
   }
